@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,11 +30,18 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     NSLog(@"c self.textField.text=%@", self.textField.text);
     DetailViewController *detailVC = segue.destinationViewController;
     NSLog(@"detailVC = %@", detailVC);
     detailVC.string = self.textField.text;
     NSLog(@"d detailVC.string=%@", detailVC.string);
+    
+    /*NSLog(@"c self.textField.text=%@", self.textField.text);
+    UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
+    DetailViewController *detailViewController = [[navigationController viewControllers] lastObject];
+    detailViewController.string = self.textField.text;
+    NSLog(@"d detailVC.string=%@", detailViewController.string);*/
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
