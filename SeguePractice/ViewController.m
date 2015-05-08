@@ -36,7 +36,8 @@
     NSLog(@"detailVC = %@", detailVC);
     detailVC.string = self.textField.text;
     NSLog(@"d detailVC.string=%@", detailVC.string);
-    
+
+
     /*NSLog(@"c self.textField.text=%@", self.textField.text);
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
     DetailViewController *detailViewController = [[navigationController viewControllers] lastObject];

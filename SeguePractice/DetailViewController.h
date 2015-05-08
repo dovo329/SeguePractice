@@ -10,6 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
-@property (weak, nonatomic) NSString *string;
+@property (strong, nonatomic) NSString *string;
 
 @end
